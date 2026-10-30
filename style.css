@@ -1,0 +1,306 @@
+/* Reset & Basic Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #6366f1; /* Latar belakang biru/ungu luar */
+    color: #334155;
+    line-height: 1.6;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 🏢 BLOK WADAH PUTIH UTAMA (Background Card Besar) */
+.main-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 960px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Header Section (Di dalam Wadah Putih) */
+header.header-card {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 35px;
+}
+
+header.header-card h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header.header-card p {
+    font-size: 1.05rem;
+    color: #64748b;
+}
+
+/* 📦 KARTU/BLOK SECTION DI DALAM WADAH UTAMA */
+section, .congrats-card {
+    background: #ffffff;
+    width: 100%;
+    padding: 30px 35px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    border-left: 5px solid #3b82f6; /* Garis aksen biru di kiri */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    
+    /* Transition untuk efek terangkat saat hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
+    cursor: default;
+}
+
+/* 🚀 EFEK HOVER KARTU (Terangkat ke Depan) */
+section.card:hover, .congrats-card.card:hover {
+    transform: translateY(-6px); /* Mengangkat blok sejauh 6px */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); /* Bayangan tebal saat hover */
+    border-left-color: #2563eb;
+}
+
+/* Headings inside Section */
+section h2 {
+    color: #2563eb;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+section h3 {
+    color: #1e293b;
+    font-size: 1.15rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+/* Red/Pink Gradient Info Box */
+.box {
+    background: linear-gradient(135deg, #e0f2fe 0%, #fce7f3 100%);
+    padding: 20px 25px;
+    border-radius: 12px;
+    border-left: 4px solid #ef4444;
+    margin: 20px 0;
+    transition: transform 0.2s ease;
+}
+
+.box:hover {
+    transform: scale(1.005);
+}
+
+.box b {
+    color: #1e293b;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.box ul, .box ol {
+    padding-left: 20px;
+}
+
+.box li {
+    margin-bottom: 8px;
+    color: #334155;
+}
+
+/* Code Snippet Box (Dark Theme) */
+pre {
+    background-color: #243447;
+    color: #e2e8f0;
+    padding: 18px 20px;
+    border-radius: 10px;
+    font-family: "Fira Code", Consolas, Monaco, monospace;
+    font-size: 0.88rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    position: relative;
+    margin: 15px 0;
+}
+
+pre::after {
+    content: "HTML";
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+code {
+    background-color: #f1f5f9;
+    color: #2563eb;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+thead {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 12px 18px;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Live Preview Card */
+.live-preview {
+    border: 2px dashed #93c5fd;
+    background-color: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.live-preview h1 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.live-preview h2 {
+    color: #2563eb;
+    border-bottom: none;
+    font-size: 1.3rem;
+}
+
+.live-preview h3 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.live-preview a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.live-preview ul, .live-preview ol {
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    font-weight: 600;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #2563eb;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+form button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Congratulations Card */
+.congrats-card {
+    border-left: 5px solid #22c55e;
+}
+
+.congrats-card h2 {
+    color: #16a34a;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.congrats-card p {
+    color: #475569;
+    margin-bottom: 10px;
+}
